@@ -10,6 +10,8 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+
+  overflow: hidden;
 }
 
 *, *::before, *::after {
@@ -17,16 +19,25 @@ html {
 }
 
 body {
+	height: 100vh;
 	margin: 0;
 	padding: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+
+	-webkit-perspective: 1px;
+	perspective: 1px;
 }
 
 img {
 	width: 100%;
+	margin: 0;
 }
 .nav {
 	text-align: right;
-	padding-bottom: 3em;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 .nav a {
 	margin-right: 1.5em;
@@ -38,18 +49,64 @@ img {
 
 .nav li {
 	display: inline-block;
-	padding-top: 1em;s
+	padding-top: 1em;
+	padding-bottom: 1.5em;
 
 }
 
 .logo {
-	width: 4%;
+	width: 3%;
 	margin-right: 2em;
 	float: left;
 
 }
 
+ul {
+	margin: 0;
+}
+
 header {
-	padding: 0;
-	background-color: lightgrey;
+	margin-bottom: 0;
+	position: relative;
+	z-index: 1;
+
+	background-color: white;
+}
+
+.parallax-group {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	text-align: center;
+
+}
+
+.back {
+	-webkit-transform: translateZ(-2px) scale(3);
+	transform: translateZ(-2px) scale(3);
+
+	position: relative;
+	top: calc(((100vh - 58.37vw) / 4) * -3);
+}
+
+.top {
+	background-color: white;
+	padding: 10em;
+	position: relative;
+	z-index: 2; 
+
+}
+
+.mid {
+	-webkit-transform: translateZ(0px);
+	transform: translateZ(0px);
+
+	position: relative;
+	bottom: 7em;
+	color: white;
+	font-size: 500%;
+}
+
+.par-pencil {
+	width: 10%;
 }
