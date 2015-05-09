@@ -102,11 +102,26 @@ header {
 	transform: translateZ(0px);
 
 	position: relative;
-	bottom: 7em;
-	color: white;
-	font-size: 500%;
+	bottom: 45em;
+
+	
 }
 
+
+.mid p {
+
+	color: white;
+	font-size: 500%;
+	font-weight: bold;
+}
 .par-pencil {
 	width: 10%;
+}
+
+.banner-list li{
+	display: inline-block;
+	color: white;
+	font-weight: bold;
+	font-size: 140%;
+	margin-right: 3em; 
 }
