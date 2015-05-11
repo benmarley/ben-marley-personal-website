@@ -10,48 +10,95 @@
 	<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
+	<div class="lax">
 
 	<header>
 
 		<img src="images/pixel-pencil.svg" class="logo">
+
+		<a href="#" class="toggle-button"></a>
+		<nav class="toggle-nav">
+			<li><a href="#">ABOUT ME</a></li>
+			<li><a href="#">DESIGN</a></li>
+			<li><a href="#">ILLUSTRATION</a></li>
+			<li><a href="#">MOTION GRAPHICS</a></li>
+			<li><a href="#">CONTACT ME</a></li>
+	</nav>
+
+		
 
 		<nav class="navigation-holder">
 			<ul class="nav">
 				<li><a href="#">ABOUT ME</a></li>
 				<li><a href="#">DESIGN</a></li>
 				<li><a href="#">ILLUSTRATION</a></li>
-				<li><a href="#">PHOTOGRAPHY</a></li>
 				<li><a href="#">MOTION GRAPHICS</a></li>
 				<li><a href="#">CONTACT ME</a></li>
 			</ul>	
 		</nav>
 	</header>
 
-	<main>
+	
 
-		<div class="parallax-group">
+	<main class="main">
+
+		<div class="wrapper">
+			<div class="parallax-scroll">
+
+				<div class="back"></div>
+
+				<p class="mid">loremipsum</p>
+
+				<div class="front">
+					<p>loremipsum</p>
+				</div>
+
+			</div>
+	
+		
 			
-			<img src="images/applestill.jpg" class="back">
-
-			<div class="mid">
-
-				<img src="images/pixel-pencil.svg" class="par-pencil">
-
-				<p class="mid-text">BEN DESIGN</p>
-
-				<ul class="banner-list">
-					<li>Designer</li>
-					<li>Illustrator</li>
-					<li>Photographer</li>
-				</ul>
+		<div class="grid image-grid">
+			<div class="unit unit-s-1-3 unit-m-1-3 unit-l-1-3">
+				<img src="http://placehold.it/400x470">
 			</div>
 
-			<div class="top">
-				<h2>FILLER</h2>
+			<div class="unit unit-s-2-3 unit-m-2-3 unit-l-2-3">
+				<img src="http://placehold.it/5000x3000/fffff">
+			</div>
+
+			<div class="unit unit-s-1-3 unit-m-1-3 unit-l-1-3">
+				<img src="http://placehold.it/400x470">
+			</div>
+			<div class="unit unit-s-1-3 unit-m-1-3 unit-l-1-3">
+				<img src="http://placehold.it/400x470">
 			</div>
 
 
+			<div class="unit unit-s-1-3 unit-m-1-3 unit-l-1-3">
+				<img src="http://placehold.it/400x470">
+			</div>
+
+			<div class="unit unit-s-2-3 unit-m-2-3 unit-l-2-3">
+				<img src="http://placehold.it/5000x3000/fffff">
+			</div>
+
+			<div class="unit unit-s-1-3 unit-m-1-3 unit-l-1-3">
+				<img src="http://placehold.it/400x470">
+			</div>
+
+			
 		</div>
+
+	</div>
+			
+
+				</div>
+				
+				
+
+
+			
+	
 
 
 
@@ -64,7 +111,8 @@
 
 	</main>
 
-
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/main.js"></script>
 
 
 </body>

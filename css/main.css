@@ -11,7 +11,6 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 
-  overflow: hidden;
 }
 
 *, *::before, *::after {
@@ -19,45 +18,46 @@ html {
 }
 
 body {
-	height: 100vh;
 	margin: 0;
-	padding: 0;
-	overflow-y: auto;
-	overflow-x: hidden;
-	-webkit-overflow-scrolling: touch;
+	overflow: hidden;
+}
 
-	-webkit-perspective: 1px;
-	perspective: 1px;
+.lax {
+
 }
 
 img {
 	width: 100%;
 	margin: 0;
 }
+
 .nav {
 	text-align: right;
-	padding-bottom: 1em;
-	padding-top: 1em;
+	padding-top: 1.5em;
+	
 }
+
 .nav a {
 	margin-right: 1.5em;
 	text-decoration: none;
 	color: black;
 	font-weight: bold;
+	padding: 1.5em;
 
+}
+
+.navigation-holder {
+	display: none;
 }
 
 .nav li {
 	display: inline-block;
-	padding-top: 1em;
-	padding-bottom: 1.5em;
 
 }
 
 .logo {
-	width: 3%;
-	margin-right: 2em;
-	float: left;
+	width: 3%; 
+	
 
 }
 
@@ -66,62 +66,142 @@ ul {
 }
 
 header {
-	margin-bottom: 0;
 	position: relative;
 	z-index: 1;
 
 	background-color: white;
 }
 
-.parallax-group {
+.image-grid {
+	margin: 10em;
+}
+
+.toggle-button {
+	background: url("../images/toggle-button.svg") no-repeat;
+	background-size: 80%;
+	height: 3em;
+	width: 3em;
+	position: absolute;
+	left: 89%;
+	text-align: right;
+}
+
+.toggle-nav {
+	display: none;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.toggle-nav li {
+	list-style-type: none;
+	padding-top: .5em;
+	padding-left: 1em; 
+}
+
+.toggle-nav a {
+	text-decoration: none;
+	color: black;
+}
+
+.toggle-nav-open {
+	display: block;
+
+}
+
+/*.banner {
+	background: url('../images/applestill.jpg') no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding-top: 30em;
+}
+
+.banner h1 {
+	text-align: center;
+	padding-top: 7em;
+	padding-bottom: 7em;
+	font-size: 300%;
+	color: white;
+}*/
+
+.wrapper {
+	height:100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	-webkit-perspective: 1px; 
+	perspective: 1px; 
+}
+
+.parallax-scroll {
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-
-	text-align: center;
-
 }
 
 .back {
-	-webkit-transform: translateZ(-2px) scale(3);
-	transform: translateZ(-2px) scale(3);
-
+	background: url("../images/applestill.jpg") center top / cover no-repeat;
+	padding-top: 50%;
+	-webkit-transform: translateZ(-1px) scale(2.05);
+	transform: translateZ(-1px) scale(2.05);
 	position: relative;
-	top: calc(((100vh - 58.37vw) / 4) * -3);
-}
-
-.top {
-	background-color: white;
-	padding: 10em;
-	position: relative;
-	z-index: 2; 
-
+	top: calc(((100vh - 40vw) / 4 ) * -2 );
 }
 
 .mid {
-	-webkit-transform: translateZ(0px);
-	transform: translateZ(0px);
 
-	position: relative;
-	bottom: 45em;
+	transform: translate(-0.5px);
+	color: black;
 
-	
+
+
+}
+
+.front {
+
+	background-color: white;
+	color: black;
+	padding:15em 1em;
+	transform: translateZ(0);
+
 }
 
 
-.mid p {
 
-	color: white;
-	font-size: 500%;
-	font-weight: bold;
-}
-.par-pencil {
-	width: 10%;
+@media only screen and (min-width: 25em) {
+
+	.toggle-button {
+		left: 92%;
+	}
+
 }
 
-.banner-list li{
-	display: inline-block;
-	color: white;
-	font-weight: bold;
-	font-size: 140%;
-	margin-right: 3em; 
+@media only screen and (min-width: 38em) {
+
+	.toggle-button {
+		left: 93%;
+	}
+
+
+}
+
+@media only screen and (min-width: 50em) {
+	.navigation-holder {
+		display: block;
+	}
+
+	.toggle-button {
+		display: none;
+	}
+	.toggle-nav {
+		display: none;
+	}
+	.logo{
+
+	float: left;
+}
+
+}
+
+@media only screen and (min-width: 60em) {
+
 }
