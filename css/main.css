@@ -203,6 +203,20 @@ header {
 	bottom: 3em;
 }
 
+.video-1 {
+	padding-bottom: 55%;
+	position: relative;
+	padding-top:20px;
+}
+
+.video-1 iframe {
+	width: 100%;
+}
+
+.scroll-no-para {
+	overflow-y: auto;
+}
+
 
 
 
